@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
-
 * {
     font-family: "JetBrains Mono", monospace;
     font-weight: 100;
     text-align: center;
     color: white;
+    margin: none;
 }
 
-
 img{
-    height: 500px;
-    width: 500px;
-    margin-top: 70px;
+    height: 53vh;
+    width: 53vh;
+    margin-top: 55px;
     border-radius: 50%;
     object-fit:cover;
+    max-width: 100%;
 }
 
 body {
@@ -43,7 +43,6 @@ button:hover{
     border-color: #fff;
 }
 
-
 #Plataformas{
     color: gray;
     margin-top: 25px;
@@ -58,6 +57,35 @@ h1{
     margin-bottom: 0%;
     letter-spacing: 2px;
 }
+
+#notificacion-portapapeles{
+    margin-top: 35px;
+    background-color: #1a1a1a;
+    background-position: center;
+    padding: 17px;
+    border: 2px solid;
+    border-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* Initial hidden state */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease-in-out, transform 0.7s ease-in-out;
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* Show the notification box when it has content */
+#notificacion-portapapeles.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+/*ahora con javascript vamos hacer que cuando #email:active tranform: position:static de .notificacion-portapapeles, vamos hacer que la notificacion no exista ahsta que email este active*/
+
 
 @media (prefers-color-scheme: light) {
     body {
@@ -77,7 +105,10 @@ h1{
     }
 }
 
-
-
-
-
+@media (max-width:600px){
+    img{
+        height: 33vh;
+        width: 63%;
+        border-radius: 70%;
+    }
+}
