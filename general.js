@@ -8,10 +8,9 @@ gmail.addEventListener("click", event => {
     
     notificacion.classList.add('show');
     
-    // Hide the notification after 4 seconds
     setTimeout(() => {
         notificacion.classList.remove('show');
-    }, 3000); // 4000 milliseconds = 4 seconds
+    }, 3000); 
 });
 
 
